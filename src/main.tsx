@@ -4,6 +4,7 @@ import './index.css'
 import App from './App.tsx'
 import {createTheme, ThemeProvider} from "@mui/material";
 import {BrowserRouter} from "react-router-dom";
+import {AuthProvider} from "./context/useAuth";
 
 const theme = createTheme({
     palette: {
@@ -17,11 +18,14 @@ const theme = createTheme({
 })
 
 createRoot(document.getElementById('root') as HTMLElement).render(
-  <StrictMode>
-      <BrowserRouter>
-          <ThemeProvider theme={theme}>
-              <App/>
-          </ThemeProvider>
-      </BrowserRouter>
-  </StrictMode>,
+    <StrictMode>
+        <BrowserRouter>
+            <ThemeProvider theme={theme}>
+                <AuthProvider>
+                    <App />
+                </AuthProvider>
+            </ThemeProvider>
+        </BrowserRouter>
+    </StrictMode>
+
 )
