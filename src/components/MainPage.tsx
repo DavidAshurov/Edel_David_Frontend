@@ -1,7 +1,9 @@
 import {Box, Button, Typography} from "@mui/material";
 import backgroundImage from '/src/assets/Farm Sharing background.jpg'
+import { useNavigate } from 'react-router-dom';
 
 const MainPage = () => {
+    const navigate = useNavigate(); // создаём "портал", который отправит пользователя
     return (
         <Box
             sx={{
@@ -47,7 +49,7 @@ const MainPage = () => {
                     to your table
                 </Typography>
                 <Typography mt={'30px'} variant={'h5'} color={"primary"}>
-                    Connect directly with local farmers. Get the freshest products with cheapest price.
+                    Connect directly with local farmers. Get the freshest products with the cheapest price.
                 </Typography>
                 <Box mt={'30px'}>
                     <Button
@@ -65,19 +67,22 @@ const MainPage = () => {
                         Buy fresh products
                     </Button>
                     <Button
+                        onClick={() => navigate('/login')}
                         sx={{
                             backgroundColor: `#fefdfd`,
-                            color:'#4b9b4b',
-                            borderRadius:'8px',
-                            px:'20px',
-                            py:'10px',
-                            fontWeight:'bold',
+                            color: '#4b9b4b',
+                            borderRadius: '8px',
+                            px: '20px',
+                            py: '10px',
+                            fontWeight: 'bold',
                             '&:hover': {
-                                backgroundColor:'primary.dark',
+                                backgroundColor: 'primary.dark',
                             }
-                        }}>
+                        }}
+                    >
                         Start selling
                     </Button>
+
                 </Box>
             </Box>
         </Box>
