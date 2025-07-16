@@ -2,9 +2,9 @@ import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'
 import App from './App.tsx'
-import {createTheme, ThemeProvider} from "@mui/material";
-import {BrowserRouter} from "react-router-dom";
-import {AuthProvider} from "./context/useAuth";
+import { createTheme, ThemeProvider } from "@mui/material";
+import { BrowserRouter } from "react-router-dom";
+import { AuthProvider } from "./context/useAuth";
 
 const theme = createTheme({
     palette: {
@@ -15,7 +15,7 @@ const theme = createTheme({
             main: "#4b9b4b"
         }
     }
-})
+});
 
 createRoot(document.getElementById('root') as HTMLElement).render(
     <StrictMode>
@@ -27,5 +27,4 @@ createRoot(document.getElementById('root') as HTMLElement).render(
             </ThemeProvider>
         </BrowserRouter>
     </StrictMode>
-
-)
+);

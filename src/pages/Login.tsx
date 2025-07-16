@@ -16,7 +16,7 @@ const Login = () => {
             login({ email }); // сохраняем user в контекст
             navigate("/market"); //  переход на маркет
         } else {
-            alert("Введите email и пароль 🙃");
+            alert("Enter email & password 🙃");
         }
     };
 
@@ -33,7 +33,7 @@ const Login = () => {
             }}
         >
             <Typography variant="h5" color="secondary" gutterBottom>
-                Вход
+                Login
             </Typography>
 
             <TextField
@@ -46,7 +46,7 @@ const Login = () => {
             />
 
             <TextField
-                label="Пароль"
+                label="Password"
                 type="password"
                 variant="outlined"
                 fullWidth
@@ -62,7 +62,7 @@ const Login = () => {
                 sx={{ mb: 2 }}
                 onClick={handleLogin} // 👈 вызов входа
             >
-                Войти
+                Login
             </Button>
 
             <Button color="primary" fullWidth onClick={() => navigate("/register")}>
